@@ -1,0 +1,16 @@
+{
+    "name": "WebRTCVideoCalling",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "dejavu",
+    "contributors": [],
+    "main":"signalServer.js",
+    "scripts":{
+        "start":"node signalServer.js"
+    },
+    "dependencies": {
+        "ws":"latest",
+        "http":"latest",
+        "express":"latest"
+    }
+}
