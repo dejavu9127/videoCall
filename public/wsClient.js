@@ -7,7 +7,7 @@ console.log(ws);
 var elem=document.getElementById('output');
 
 ws.onopen=function(){
-ws.send("Hello");
+ws.send(JSON.stringify({action:"login",name:"ani"}));
 };
 
 ws.onmessage=function(event){

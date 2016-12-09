@@ -28,25 +28,21 @@ server.listen(port,function(){
 var WebSocketServer=require('ws').Server;
 var wss=new WebSocketServer({server:server});
 
-var clients=[];
+var client=[];
 var users={};
 
-clients.push({
-    name:"admin",
-    pswd:"admin",
-    session:null
-});
+
 
 wss.on('connection',function(connection){
     console.log("**************New Connection**************************");
-    sendTo(connection,"Welcome");
+    //sendTo(connection,"Welcome");
     connection.on('message', function(message){
        //Process incoming JSON data
        
        console.log("- - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
     
-console.log("RTCSignalingServer>>>");
-console.log(message);
+console.log("RTCSignalingServer>>>"+message);
+
 var data;
 try{
     data=JSON.parse(message);
