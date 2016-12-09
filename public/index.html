@@ -6,13 +6,23 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Home Video Calling</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
-        <p id="output"></p>
-        <script src="wsClient.js"></script>
+        <div>WebCam video</div>
+        
+      
+            <div>Username:<input type="text" id="loginName"/></div>
+            <div>Connect:<input type="text" id="clientName"/></div>
+            <div><button id="loginBtn">Login</button>
+            <button id="connectBtn">Connect</button></div>
+        
+        <video id="player" autoplay="true" width="320"></video>
+        <video id="remotePlayer" autoplay="true" width="420"></video>
+        
+        <script src="rtcClient.js"></script>
+        
     </body>
 </html>
