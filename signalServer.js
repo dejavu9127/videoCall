@@ -2,7 +2,7 @@
 var express=require('express');
 var http=require('http');
 var app=express();
-var port=process.env.PORT || 9090;
+var port=9090;
 var path=__dirname+'/public';
 
 var server=http.Server(app);
