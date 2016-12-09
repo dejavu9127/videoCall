@@ -2,22 +2,14 @@
 var express=require('express');
 var http=require('http');
 var app=express();
-var port=9090;
+var port=process.env.PORT || 9090;
 var path=__dirname+'/public';
 
 var server=http.Server(app);
 
 
-app.use(express.static(path));
+app.use('/',express.static(path));
 
-app.get('/',function(){
-    res.sendFile(path+'/index.html',function(err){
-        if(err){
-            console.log("No Page found");
-            res.send(err);
-        }
-    });
-});
 
 server.listen(port,function(){
     console.log(server.address());
