@@ -1,6 +1,6 @@
 
 console.log("Page Script Loaded");
-var HOST=location.origin.replace(/^http/,'wss');
+var HOST=location.origin.replace(/^http/,'ws');
 
 
 
