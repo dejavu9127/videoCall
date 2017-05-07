@@ -32,6 +32,15 @@ console.log(rtcconnection);
 
 var connectedUser, localConnection, localChannel,receiveChannel;
 
+var availHeight=window.screen.availHeight;
+var availWidth=window.screen.availWidth;
+
+localVideo.setAttribute('height', availHeight/4);
+localVideo.setAttribute('width ', availWidth/4);
+
+remoteVideo.setAttribute('height', availHeight);
+remoteVideo.setAttribute('width ', availWidth);
+
 
 rtcconnection.onclose=function(){
     console.log("SIgnaling Server Connection closed");
