@@ -35,11 +35,11 @@ var connectedUser, localConnection, localChannel,receiveChannel;
 var availHeight=window.screen.availHeight;
 var availWidth=window.screen.availWidth;
 
-document.getElementById("localVideo").width=availWidth/4;
-document.getElementById("localVideo").height=availWidth/4;
+document.getElementById("player").width=availWidth/4;
+document.getElementById("player").height=availWidth/4;
 
-document.getElementById("remoteVideo").width=availWidth;
-document.getElementById("remoteVideo").height=availWidth;
+document.getElementById("remotePlayer").width=availWidth;
+document.getElementById("remotePlayer").height=availWidth;
 
 rtcconnection.onclose=function(){
     console.log("SIgnaling Server Connection closed");
