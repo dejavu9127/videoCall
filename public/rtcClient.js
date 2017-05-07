@@ -36,10 +36,10 @@ var availHeight=window.screen.availHeight;
 var availWidth=window.screen.availWidth;
 
 document.getElementById("player").width=availWidth/4;
-document.getElementById("player").height=availWidth/4;
+document.getElementById("player").height=availHeight/4;
 
 document.getElementById("remotePlayer").width=availWidth;
-document.getElementById("remotePlayer").height=availWidth;
+document.getElementById("remotePlayer").height=availHeight;
 
 rtcconnection.onclose=function(){
     console.log("SIgnaling Server Connection closed");
