@@ -97,7 +97,7 @@ function handleLogin(success){
         console.log("Username taken. Please try different username");
     }else{
         //local video
-        var mediaOptions={audio:false,video:true};
+        var mediaOptions={audio:true,video:true};
 
 if(!navigator.getUserMedia){
     navigator.getUserMedia=navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia;
