@@ -32,6 +32,14 @@ console.log(rtcconnection);
 
 var connectedUser, localConnection, localChannel,receiveChannel;
 
+var availHeight=window.screen.availHeight;
+var availWidth=window.screen.availWidth;
+
+document.getElementById("player").width=availWidth/4;
+document.getElementById("player").height=availHeight/4;
+
+document.getElementById("remotePlayer").width=availWidth;
+document.getElementById("remotePlayer").height=availHeight;
 
 rtcconnection.onclose=function(){
     console.log("SIgnaling Server Connection closed");
@@ -97,7 +105,7 @@ function handleLogin(success){
         console.log("Username taken. Please try different username");
     }else{
         //local video
-        var mediaOptions={audio:false,video:true};
+        var mediaOptions={audio:true,video:true};
 
 if(!navigator.getUserMedia){
     navigator.getUserMedia=navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia;
