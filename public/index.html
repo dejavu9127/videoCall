@@ -29,7 +29,30 @@ and open the template in the editor.
 	</td
 	</tr>
 	</table>
-        
+	
+	<pre class="sh_javascript">
+HTMLAudioElement.volume = 0.9;
+HTMLAudioElement.play();
+</pre>
+	
+    <pre class="sh_javascript">
+var context = new webkitAudioContext(),
+var sineWave = context.createOscillator();
+
+// Declare gain node
+var gainNode = context.createGainNode();
+
+// Connect sine wave to gain node
+sineWave.connect(gainNode);
+
+// Connect gain node to speakers
+gainNode.connect(context.destination);
+
+// Play sine wave
+sineWave.noteOn(0);
+
+gainNode.gain.value = 0.9;
+</pre>  
         
         
         <script src="rtcClient.js"></script>
