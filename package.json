@@ -10,7 +10,8 @@
     },
     "dependencies": {
         "ws":"latest",
-        "http":"latest",
+        "https":"latest",
         "express":"latest"
+		
     }
 }

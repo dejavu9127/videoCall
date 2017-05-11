@@ -1,15 +1,26 @@
 
 var express=require('express');
-var http=require('http');
+var https=require('https');
 var app=express();
 var port=process.env.PORT || 9090;
 var path=__dirname+'/public';
+var fs = require('fs');
 
-var server=http.Server(app);
+
+
+var privateKey=fs.readFileSync(__dirname+'/ssl-cert/key.pem','utf8');
+var certificate=fs.readFileSync(__dirname+'/ssl-cert/cert.pem','utf8');
+
+var credentials={
+	key:privateKey,
+	cert:certificate
+};
+
 
 
 app.use('/',express.static(path));
 
+var server=https.createServer(credentials,app);
 
 server.listen(port,function(){
     console.log(server.address());
